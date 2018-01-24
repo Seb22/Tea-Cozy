@@ -8,68 +8,80 @@ html {font-family: Helvetica;
 
 /*Header*/
 
-.header {display: block;
+.header {
+        display: block;
         position: fixed;
+        top: 0;
         height: 69px;
         width: 100%;
         border-bottom: 1px solid seashell;
         z-index: 20;
+        margin: 0 auto;
         }
 
-nav {text-decoration: underline;
-              text-align: right;
+#logo {height: 50px;
+      position: absolute;
+      top: 10px;
+      left: 10px;
+      z-index: 100;}
+
+nav {display: block;
+    text-decoration: underline;
+     text-align: right;
+     padding: 19px 15px;
 }
+
+span {padding: 1px 10px;}
+/*Main Section*/
+
+.main {display: flex;
+      flex-flow: column wrap;
+      max-height: 100%;
+      width: 100%;
+      position: relative;
+      justify-content: center;
+      margin: auto;
+      }
 
 
 /*Our Mission*/
 
 .our_mission {display: flex;
           display: block;
-          position: relative;
-          top: 69px;
-          justify-content: center;
-          align-items: center;
           width: 1200px;
           height: 700px;
-          margin: auto;
-          padding-bottom: 50px;
           background-image: url("./images/img-mission-background.jpg");
         }
 
 .our_mission .content_1 {background-color: black;
                         width: 1200px;
-                        margin: 0 auto;
+
 }
 
 /*Tea of the Month*/
 
 .featured_tea {display: inline-flex;
+              display: inline-block;
               flex-flow: row wrap;
-              position: relative;
+              justify-content: space-around;
+              align-items: center;
+              height: 700px;
               width: 1000px;
               margin: auto;
         }
 
-.tea_1 {width: 300px;
-        margin: auto;}
+.featured_tea img {height: 200px;
+                  width: 300px;}
 
-.tea_2 {width: 300px;
-        margin: auto;}
 
-.tea_3 {width: 300px;
-        margin: auto;}
-
-.tea_4 {width: 300px;
-        margin: auto;}
-
-.tea_5 {width: 300px;
-        margin: auto;}
+.tea_1 .tea_2 .tea_3 .tea_4 .tea_5 {display: inline-block;
+                                    width: 300px;
+                                    margin: auto;}
 
 /*Locations*/
 
-.location {display: flex;
+.location {display: inline-flex;
             display: block;
-            position: relative;
             justify-content: center;
             width: 1200px;
             height: 500px;
@@ -89,7 +101,6 @@ nav {text-decoration: underline;
       background-color: black;
       text-align: center;
       width: 300px;
-      margin: auto;
       margin-right: 40px;
       opacity: 1;}
 
@@ -101,9 +112,13 @@ nav {text-decoration: underline;
 
 /*Footer*/
 
-.footer {width: 1200px;
+.footer {position: fixed;
+        width: 1200px;
         height: 200px;
         margin: auto;
         }
-.copyright {text-align: left;
-            padding-left: 20px;}
+
+.footer #copyright {text-align: left;
+            padding-left: 20px;
+
+          }
