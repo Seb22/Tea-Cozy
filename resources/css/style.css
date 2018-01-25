@@ -8,117 +8,138 @@ html {font-family: Helvetica;
 
 /*Header*/
 
-.header {
-        display: block;
+.header {display: block;
         position: fixed;
         top: 0;
+        left: 0;
+        right: 0;
         height: 69px;
         width: 100%;
         border-bottom: 1px solid seashell;
-        z-index: 20;
-        margin: 0 auto;
+        z-index: 9999;
+        margin: auto;
         }
 
 #logo {height: 50px;
-      position: absolute;
-      top: 10px;
-      left: 10px;
-      z-index: 100;}
+      top: 0;
+      left: 0;
+      right: 0;
+      position: fixed;
+      padding-left: 10px;
+      padding-top: 10px;
+      z-index: 9999
+      }
 
 nav {display: block;
+    text-align: right;
     text-decoration: underline;
-     text-align: right;
-     padding: 19px 15px;
+    padding: 19px 15px;
 }
 
 span {padding: 1px 10px;}
+
 /*Main Section*/
 
 .main {display: flex;
       flex-flow: column wrap;
-      max-height: 100%;
+      height: 2000px;
       width: 100%;
       position: relative;
-      justify-content: center;
-      margin: auto;
+      justify-content: space-between;
+      align-content: : center;
+      align-items: center;
+      margin: 0 auto;
       }
 
 
 /*Our Mission*/
 
 .our_mission {display: flex;
-          display: block;
-          width: 1200px;
-          height: 700px;
-          background-image: url("./images/img-mission-background.jpg");
+              display: block;
+              flex-direction: row;
+              align-content: center;
+              position: relative;
+              width: 1200px;
+              height: 700px;
+              background-image: url("./images/img-mission-background.jpg");
         }
 
 .our_mission .content_1 {background-color: black;
                         width: 1200px;
+                        flex-grow: 2;
 
 }
 
 /*Tea of the Month*/
 
-.featured_tea {display: inline-flex;
-              display: inline-block;
-              flex-flow: row wrap;
-              justify-content: space-around;
+.featured_tea {display: flex;
+              flex-flow: column wrap;
+              align-content: center;
               align-items: center;
+              position: relative;
               height: 700px;
               width: 1000px;
               margin: auto;
         }
 
+.headline {display: block;
+          font-weight: bold;
+          margin-top: 10px;}
+
+.tea {display: flex;
+      flex-flow: row wrap;
+      align-items: center;
+      justify-content: space-between;
+  }
+
+.last_2 {display: flex;
+        width: 1000px;
+        flex-direction: : column;
+        align-content: center;
+        justify-content: center;
+        }
+
+.tea_4 {padding-right: : 50px;}
+
+.tea_5  {padding-left: 50px;}
+
 .featured_tea img {height: 200px;
                   width: 300px;}
 
+h3 {padding-top: 10px;
+    margin-top: 0;}
 
-.tea_1 .tea_2 .tea_3 .tea_4 .tea_5 {display: inline-block;
-                                    width: 300px;
-                                    margin: auto;}
 
 /*Locations*/
 
-.location {display: inline-flex;
-            display: block;
-            justify-content: center;
-            width: 1200px;
-            height: 500px;
-            margin: auto;
-            background-image: url("./images/img-locations-background.jpg");
+.location {display: flex;
+          display: block;
+          position: relative;
+          flex-direction: row;
+          align-content: center;
+          width: 1200px;
+          height: 500px;
+          margin: auto;
+          background-image: url("./images/img-locations-background.jpg");
 }
 .location h2 {margin-bottom: 15px;}
 
-.downtown {display: inline-block;
-          background-color: black;
-          text-align: center;
-          width: 300px;
-          margin-right: 40px;
-          opacity: 1;}
+.location div {display: inline-block;
+              background-color: black;
+              text-align: center;
+              width: 300px;
+              margin-right: 40px;
+              opacity: 1;}
 
-.east {display: inline-block;
-      background-color: black;
-      text-align: center;
-      width: 300px;
-      margin-right: 40px;
-      opacity: 1;}
-
-.oakdale {display: inline-block;
-          background-color: black;
-          text-align: center;
-          width: 300px;
-          opacity: 1;}
 
 /*Footer*/
 
-.footer {position: fixed;
-        width: 1200px;
+.footer {position: relative;
+        width: 100%;
         height: 200px;
         margin: auto;
         }
 
 .footer #copyright {text-align: left;
-            padding-left: 20px;
-
+                    padding-left: 20px;
           }
